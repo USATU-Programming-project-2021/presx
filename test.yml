@@ -1,0 +1,12 @@
+
+pres:
+  slides:
+    - slide:
+      title: First slide
+      subtitle: Begin
+
+    - slide: Second slide
+      body: Slide number 2
+
+    - slide:
+      title: End!

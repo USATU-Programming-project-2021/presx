@@ -78,18 +78,14 @@ impl Application for Pres {
     }
 
     fn view(&mut self) -> Element<Message> {
+        let slide = &self.slides.pres.slides.get(self.slide_num).unwrap().slide;
         Column::new()
             .padding(20)
             .align_items(Align::Center)
-            .push(Text::new(format!("Slide - {}", self.slide_num)).size(50))
+            .push(Text::new(format!("{:?}", slide.title)).size(50))
+            .push(Text::new(format!("{:?}", slide.subtitle)).size(40))
             .push(Rule::horizontal(5))
-            .push(
-                Text::new(format!(
-                    "{:?}",
-                    self.slides.pres.slides.get(self.slide_num).unwrap()
-                ))
-                .size(50),
-            )
+            .push(Text::new(format!("{:?}", slide.plain_text)).size(50))
             .into()
     }
 

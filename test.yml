@@ -1,12 +1,13 @@
-
 pres:
   slides:
     - slide:
-      title: First slide
-      subtitle: Begin
+        title: First slide
+        subtitle: Begin
 
-    - slide: Second slide
-      body: Slide number 2
+    - slide: 
+        title: Second slide
+        plain_text: Slide number 2
 
     - slide:
-      title: End!
+        title: End!
+
